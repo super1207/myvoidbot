@@ -13,10 +13,10 @@ cover & copy 一些好玩的插件 <br />
 
 | 插件名      | 介绍 | 备注 | LICENSE |
 | ----------- | ----------- | ----------- | ----------- |
-| myfriend  | 我的朋友图片合成       | 模板插件 | MIT |
-| randpic   | 发送一张随机图片   | 接口来自[iw233](https://iw233.cn/api/Random.php) | MIT |
-| zbgif   | 各种表情包合成   | cover自[tdf1939/ZeroBot-Plugin-Gif](https://github.com/tdf1939/ZeroBot-Plugin-Gif) | - |
-| todaynew   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/) | MIT |
+| [myfriend](/plus/myfriend_plus)  | 我的朋友图片合成       | 模板插件 | MIT |
+| [randpic](/plus/randpic_plus)   | 发送一张随机图片   | 接口来自[iw233](https://iw233.cn/api/Random.php) | MIT |
+| [zbgif](/plus/zbgif_plus)   | 各种表情包合成   | cover自[tdf1939/ZeroBot-Plugin-Gif](https://github.com/tdf1939/ZeroBot-Plugin-Gif) | - |
+| [todaynew](/plus/todaynew_plus)   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/) | MIT |
 
 ## 环境运行
 
