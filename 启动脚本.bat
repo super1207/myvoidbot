@@ -1,0 +1,1 @@
+python -B .\core\voidbot.py
