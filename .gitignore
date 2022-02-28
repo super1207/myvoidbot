@@ -11,4 +11,4 @@
 /share
 删除pyc.sh
 安装依赖.bat
-plus/wordcloud_plus.py/dat.db
+plus/wordcloud_plus/dat.db
