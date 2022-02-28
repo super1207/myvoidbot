@@ -1,5 +1,5 @@
-from genericpath import isdir
 import os
+import logging
 import base64
 import random
 from io import BytesIO
@@ -30,6 +30,7 @@ def get_pic_path(dir1: str,dir2: str):
         return pic_dir
     # 如果不存在,则下载
     url = "https://cdn.jsdelivr.net/gh/super1207/sucai@main/"+ dir1 +"/" + dir2
+    logging.getLogger(__name__).debug( "正在下载:" + url)
     res = request.urlopen(request.Request(url)).read()
     if not os.path.isdir(os.path.dirname(pic_dir)):
         os.makedirs(os.path.dirname(pic_dir))

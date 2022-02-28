@@ -8,3 +8,7 @@
 /Lib
 /python_license
 /plus/zbgif_plus/sucai
+/share
+删除pyc.sh
+安装依赖.bat
+plus/wordcloud_plus.py/dat.db
