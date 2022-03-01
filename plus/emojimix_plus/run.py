@@ -85,7 +85,7 @@ class TestPlugin(Plugin):
         json_arr = json_dat[hex(code1)[2:]]
         flag = False
         for it in json_arr:
-            if it["rightEmoji"] == hex(code1)[2:] or it["leftEmoji"] == hex(code1)[2:]:
+            if it["rightEmoji"] == hex(code2)[2:] or it["leftEmoji"] == hex(code2)[2:]:
                 flag = True
                 emoji_left = it["leftEmoji"]
                 emoji_right = it["rightEmoji"]
