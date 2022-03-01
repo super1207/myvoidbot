@@ -28,4 +28,4 @@ python 3.8 & [onebot-11](https://github.com/botuniverse/onebot-11)
 
 这不是voidbot的插件框架 , 请不要在这个项目中直接pr新的插件. 同时 , 也不保证这个项目外的插件的兼容性 .
 
-voidbot使用 Apache License , 所以这个项目中core文件夹中的内容也遵循 Apache License. plus文件夹中的内容 , 因cover/copy的对象不同 , 所以 , 可能会有各自不同的协议 .
+voidbot使用 Apache License V2 , 所以这个项目中core文件夹中的内容也遵循 Apache License V2 . plus文件夹中的内容 , 因cover/copy的对象不同 , 所以 , 可能会有各自不同的协议 .
