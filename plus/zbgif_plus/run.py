@@ -8,7 +8,7 @@ from urllib import request
 from core.MsgTool import MsgTool as MT
 from core.Plugin import Plugin
 
-from PIL import Image, ImageDraw,ImageFont
+from PIL import Image, ImageDraw
 
 """
 在下面加入你自定义的插件，自动加载本文件所有的 Plugin 的子类
