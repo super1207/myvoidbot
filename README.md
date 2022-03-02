@@ -19,6 +19,7 @@ cover & copy 一些好玩的插件 <br />
 | [todaynew](/plus/todaynew_plus)   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/) | MIT |
 | [wordcloud](/plus/wordcloud_plus)   | 今日词云   | cover自[Hellobaka/WordCloud](https://github.com/Hellobaka/WordCloud) | ApacheV2 |
 | [EmojiMix](/plus/emojimix_plus)   | Emoji混合   | cover自[Hellobaka/EmojiMix](https://github.com/Hellobaka/EmojiMix) | ApacheV2 |
+| [runall](/plus/runall_plus)   | 在线运行各种编程语言   | cover自[super1207/runall](https://github.com/super1207/runall) | AGPLV3 |
 
 ## 环境运行
 
