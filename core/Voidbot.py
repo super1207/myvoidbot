@@ -70,12 +70,39 @@ def on_message(_, message):
         t = threading.Thread(target=plugin_pool, args=(context, ))
         t.start()
 
+def read_txt_to_list(fpath):
+    with open(fpath,"r") as f:
+        l = f.readlines()
+    out_list = []
+    for it in l:
+        t = it.strip()
+        if t != "":
+            out_list.append(t)
+    return out_list
+
+def plus_is_enable(cfg_list,plus_name):
+    if cfg_list == None:
+        return True
+    for it in cfg_list:
+        t = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),"plus",it,"run.py")
+        if plus_name == t:
+            return True
+    return False
+
+
 if __name__ == "__main__":
 
     # 载入Plus目录下的插件
     dirname = os.path.dirname(os.path.abspath(__file__))
+    plus_dir = os.path.join(os.path.dirname(dirname),"plus")
+    enable_plus_dir = os.path.join(plus_dir,"enable_plus.txt")
+    enable_plus = None
+    if os.path.isfile(enable_plus_dir):
+        enable_plus = read_txt_to_list(enable_plus_dir)
     py_file_list = [py_file for py_file in glob.glob("{}{}plus{}*{}run.py".format(os.path.dirname(dirname),os.sep,os.sep,os.sep,os.sep))]
     for script_module_name in py_file_list:
+        if not plus_is_enable(enable_plus,script_module_name):
+            continue
         logger.info("加载插件 -> " + script_module_name)
         spec = importlib.util.spec_from_file_location(script_module_name, script_module_name)
         script_module = importlib.util.module_from_spec(spec)
