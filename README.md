@@ -21,9 +21,17 @@ cover & copy 一些好玩的插件 <br />
 | [EmojiMix](/plus/emojimix_plus)   | Emoji混合   | cover自[Hellobaka/EmojiMix](https://github.com/Hellobaka/EmojiMix) | ApacheV2 |
 | [runall](/plus/runall_plus)   | 在线运行各种编程语言   | cover自[super1207/runall](https://github.com/super1207/runall) | AGPLV3 |
 
-## 环境运行
+## 运行
+
+### 运行环境
 
 python 3.8 & [onebot-11](https://github.com/botuniverse/onebot-11)
+
+### 如何运行
+
+1. 先用pip安装 requestment.txt 里面的依赖
+2. 修改 core/Voidbot.py 里面的ws正向连接端口号等信息
+3. 运行 core/Voidbot.py
 
 ## 注意
 
