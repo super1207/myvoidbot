@@ -5,3 +5,4 @@ runall_plus
 todaynew_plus
 wordcloud_plus
 zbgif_plus
+cet4_plus
