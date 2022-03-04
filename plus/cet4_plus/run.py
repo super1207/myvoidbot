@@ -33,7 +33,7 @@ url = [
     "/storages/fa96-audiofreehighqps/DE/AA/CMCoOSIDt3p9AKwm5wBzxuTo.m4a",
     "/storages/650d-audiofreehighqps/AA/56/CKwRIDoEMQI8AKps5gCWWVnV.m4a",
     "/storages/6ac7-audiofreehighqps/DC/C7/CKwRIasEm5hLAKtiIQC5Birt.m4a",
-    "storages/e84d-audiofreehighqps/A5/55/CKwRIUEE0IkHALAEoQDMnBzk.m4a"
+    "/storages/e84d-audiofreehighqps/A5/55/CKwRIUEE0IkHALAEoQDMnBzk.m4a"
 ]
 
 class TestPlugin(Plugin):
