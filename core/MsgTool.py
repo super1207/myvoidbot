@@ -72,6 +72,15 @@ class MsgTool:
                 return it["data"]["qq"]
         raise Exception("can't get at from message")
 
+    def get_pic_from_msg(message) -> str:
+        msg_arr = message
+        if isinstance(message,str):
+            msg_arr = MsgTool.str_msg_to_arr(message)
+        for it in msg_arr:
+            if it["type"] == "image":
+                return it["data"]["url"]
+        raise Exception("can't get img from message")
+
     def get_text_from_msg(message) -> str:
         msg_arr = message
         if isinstance(message,str):
