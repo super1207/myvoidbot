@@ -21,6 +21,7 @@ cover & copy 一些好玩的插件 <br />
 | [EmojiMix](/plus/emojimix_plus)   | Emoji混合   | cover自[Hellobaka/EmojiMix](https://github.com/Hellobaka/EmojiMix) | ApacheV2 |
 | [runall](/plus/runall_plus)   | 在线运行各种编程语言   | cover自[super1207/runall](https://github.com/super1207/runall) | AGPLV3 |
 | [cet4](/plus/cet4_plus)   | 发送一套四级听力   | cover自[renren0103/CET4-Mirai](https://github.com/renren0103/CET4-Mirai) | - |
+| [givemepic](/plus/givemepic_plus)   | 来点xxx的图片  | cover自[super1207/PicBot](https://github.com/super1207/PicBot) | AGPLV3 |
 
 ## 运行
 
