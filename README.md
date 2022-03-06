@@ -11,18 +11,18 @@ cover & copy 一些好玩的插件 <br />
 
 ## 插件列表
 
-| 插件名      | 介绍 | 备注 | LICENSE |
-| ----------- | ----------- | ----------- | ----------- |
-| [myfriend](/plus/myfriend_plus)  | 我的朋友图片合成       | 模板插件 | MIT |
-| [randpic](/plus/randpic_plus)   | 发送一张随机图片   | 接口来自[iw233](https://iw233.cn/api/Random.php) | MIT |
-| [zbgif](/plus/zbgif_plus)   | 各种表情包合成   | cover自[tdf1939/ZeroBot-Plugin-Gif](https://github.com/tdf1939/ZeroBot-Plugin-Gif) | - |
-| [todaynew](/plus/todaynew_plus)   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/) | MIT |
-| [wordcloud](/plus/wordcloud_plus)   | 今日词云   | cover自[Hellobaka/WordCloud](https://github.com/Hellobaka/WordCloud) | ApacheV2 |
-| [EmojiMix](/plus/emojimix_plus)   | Emoji混合   | cover自[Hellobaka/EmojiMix](https://github.com/Hellobaka/EmojiMix) | ApacheV2 |
-| [runall](/plus/runall_plus)   | 在线运行各种编程语言   | cover自[super1207/runall](https://github.com/super1207/runall) | AGPLV3 |
-| [cet4](/plus/cet4_plus)   | 发送一套四级听力   | cover自[renren0103/CET4-Mirai](https://github.com/renren0103/CET4-Mirai) | - |
-| [givemepic](/plus/givemepic_plus)   | 来点xxx的图片  | cover自[super1207/PicBot](https://github.com/super1207/PicBot) | AGPLV3 |
-| [picsearch](/plus/picsearch_plus)   | 以图搜图  | 接口来自[yandex图片搜索](https://yandex.com/images/) | MIT |
+| 插件名      | 介绍 | 备注 | LICENSE | 三方库依赖 |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| [myfriend](/plus/myfriend_plus)  | 我的朋友图片合成       | 模板插件 | MIT | Pillow |
+| [randpic](/plus/randpic_plus)   | 发送一张随机图片   | 接口来自[iw233](https://iw233.cn/api/Random.php) | MIT | - |
+| [zbgif](/plus/zbgif_plus)   | 各种表情包合成   | cover自[tdf1939/ZeroBot-Plugin-Gif](https://github.com/tdf1939/ZeroBot-Plugin-Gif) | - | Pillow |
+| [todaynew](/plus/todaynew_plus)   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/) | MIT | - |
+| [wordcloud](/plus/wordcloud_plus)   | 今日词云   | cover自[Hellobaka/WordCloud](https://github.com/Hellobaka/WordCloud) | ApacheV2 | jieba,zhon,wordcloud |
+| [EmojiMix](/plus/emojimix_plus)   | Emoji混合   | cover自[Hellobaka/EmojiMix](https://github.com/Hellobaka/EmojiMix) | ApacheV2 | - |
+| [runall](/plus/runall_plus)   | 在线运行各种编程语言   | cover自[super1207/runall](https://github.com/super1207/runall) | AGPLV3 | - |
+| [cet4](/plus/cet4_plus)   | 发送一套四级听力   | cover自[renren0103/CET4-Mirai](https://github.com/renren0103/CET4-Mirai) | - | - |
+| [givemepic](/plus/givemepic_plus)   | 来点xxx的图片  | cover自[super1207/PicBot](https://github.com/super1207/PicBot) | AGPLV3 | - |
+| [picsearch](/plus/picsearch_plus)   | 以图搜图  | 接口来自[yandex图片搜索](https://yandex.com/images/) | MIT | - |
 
 ## 运行
 
