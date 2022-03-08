@@ -1,4 +1,5 @@
 import os
+import sys
 import string
 import sqlite3
 import base64
@@ -70,7 +71,11 @@ class TestPlugin(Plugin):
         if len(word) == 0:
             return self.send_msg(MT.at(self.context["user_id"]), MT.text("今日本群没有词语"))
         word = ' '.join(word)
-        wc = wordcloud.WordCloud(font_path = "simsun.ttc",scale = 6,max_words=50)
+        if sys.platform == "win32":
+            font_path = "simsun.ttc"
+        else:
+            font_path = "/usr/share/fonts/font/simsun.ttc"
+        wc = wordcloud.WordCloud(font_path = font_path,scale = 6,max_words=50)
         wc.generate(word)
         file_name = str(random.random())+".png"
         current_dir = os.path.dirname(__file__)

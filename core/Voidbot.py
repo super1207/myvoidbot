@@ -10,6 +10,8 @@ import collections
 import json as json_
 import importlib.util
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(str(BASE_DIR))
 from core.MsgTool import MsgTool
 from core.Plugin import Plugin
 

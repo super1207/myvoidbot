@@ -1,4 +1,5 @@
 import os
+import sys
 import base64
 from io import BytesIO
 from urllib import request
@@ -41,7 +42,11 @@ class TestPlugin(Plugin):
         box = (x, y, (x + avatar_size[0]), (y + avatar_size[1]))
         bg.paste(avatar, box, mask)
         # path_to_ttf = os.path.join(current_dir,"fz.ttf")
-        path_to_ttf = "simsun.ttc"
+        if sys.platform == "win32":
+            font_path = "simsun.ttc"
+        else:
+            font_path = "/usr/share/fonts/font/simsun.ttc"
+        path_to_ttf = font_path
         font = ImageFont.truetype(path_to_ttf, size=38)
         font2 = ImageFont.truetype(path_to_ttf, size=36)
         draw = ImageDraw.Draw(bg)
