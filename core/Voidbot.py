@@ -34,7 +34,7 @@ def plugin_pool(context: dict):
                 plugin.handle()
         except:
             logger.error("模块抛出异常 -> " + traceback.format_exc())
-            
+
 class Echo:
     def __init__(self):
         self.echo_num = 0
@@ -57,6 +57,8 @@ def deal_arr_msg():
 def on_message(_, message):
     # https://github.com/botuniverse/onebot-11/blob/master/event/README.md
     context = json_.loads(message)
+    if message[len(message)-1] != '\n':
+        message += '\n'
     if "echo" in context:
         logger.debug("调用返回 -> " + message)
         # 响应报文通过队列传递给调用 API 的函数

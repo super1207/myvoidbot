@@ -42,8 +42,9 @@ class Plugin:
 
     def call_api(self, action: str, params: dict) -> dict:
         echo_num, q = self.echo.get()
-        data = json_.dumps({"action": action, "params": params, "echo": echo_num})
-        self.logger.info("发送调用 <- " + data)
+        to_send = {"action": action, "params": params, "echo": echo_num}
+        data = json_.dumps(to_send)
+        self.logger.info("发送调用 <- " + str(to_send) + '\n')
         self.ws.send(data)
         try:    # 阻塞至响应或者等待30s超时
             return q.get(timeout=30)
