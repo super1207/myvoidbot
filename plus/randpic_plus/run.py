@@ -11,7 +11,7 @@ match() 返回 True 则自动回调 handle()
 
 class TestPlugin(Plugin):
     def match(self):  # 说 随机图片 则回复
-        return self.on_full_match("随机图片")
+        return self.on_full_match("#随机图片")
 
     def handle(self):
         url = "https://iw233.cn/api/Random.php?" + str(random.random())
