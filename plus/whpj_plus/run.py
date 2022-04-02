@@ -1,8 +1,4 @@
-import os
 import re
-import json
-import logging
-import base64
 from urllib import request
 from urllib import parse
 
