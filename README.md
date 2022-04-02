@@ -24,6 +24,7 @@ cover & copy 一些好玩的插件 <br />
 | [givemepic](/plus/givemepic_plus)   | 来点xxx的图片  | cover自[super1207/PicBot](https://github.com/super1207/PicBot) | AGPLV3 | - |
 | [picsearch](/plus/picsearch_plus)   | 以图搜图  | 接口来自[yandex图片搜索](https://yandex.com/images/) | MIT | - |
 | [covid_plus](/plus/covid_plus)   | 新冠疫情  | 接口来自[丁香医生](https://ncov.dxy.cn/ncovh5/view/pneumonia) | MIT | - |
+| [whpj_plus](/plus/whpj_plus)   | 汇率换算  | 接口来自[中国银行](https://www.boc.cn/sourcedb/whpj) | MIT | - |
 
 ## 运行
 
