@@ -10,3 +10,4 @@ givemepic_plus
 picsearch_plus
 covid_plus
 whpj_plus
+cppreference_plus
