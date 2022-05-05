@@ -26,6 +26,7 @@ cover & copy 一些好玩的插件 <br />
 | [covid_plus](/plus/covid_plus)   | 新冠疫情  | 接口来自[丁香医生](https://ncov.dxy.cn/ncovh5/view/pneumonia) | MIT | - |
 | [whpj_plus](/plus/whpj_plus)   | 汇率换算  | 接口来自[中国银行](https://www.boc.cn/sourcedb/whpj) | MIT | - |
 | [cppreference_plus](/plus/cppreference_plus)   | cppreference查询  | cover自[jie65535/mirai-console-jcr-plugin](https://github.com/jie65535/mirai-console-jcr-plugin) | AGPLV3 | - |
+| [song_plus](/plus/song_plus)   | 点歌插件  | 接口来自[优客API](https://api.iyk0.com/doc/wymusic) | MIT | - |
 
 ## 运行
 
