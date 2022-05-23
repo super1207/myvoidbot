@@ -9,16 +9,20 @@ from matplotlib import image
 from core.MsgTool import MsgTool as MT
 from core.Plugin import Plugin
 
+
+"""
+规则：
+    1：只能抽取本群3天内(前天0点之后)发过言的人做老婆
+    2：不能抽取已经有老婆或已经成为老婆的人做老婆
+    3：任何可以抽取自己为自己的老婆(无视第二条规则)
+    4：抽取的老婆会在第二天失效
+    5：本机器人不会成为老婆
+    6：一起愉快的玩耍吧
+"""
+
+
 # 数据库加锁
 sql_lock = threading.Lock()
-
-
-"""
-在下面加入你自定义的插件，自动加载本文件所有的 Plugin 的子类
-只需要写一个 Plugin 的子类，重写 match() 和 handle()
-match() 返回 True 则自动回调 handle()
-"""
-
 
 def get_tou(qq: str):
     # 获取头像
@@ -84,6 +88,7 @@ def get_wife_sqlite(group_id:int) -> list[int]:
     sql_conn.close()
     return list(set(user_ids))
 
+# 获取单身名单
 def get_bachelor_sqlite(group_id:int):
     wifes = get_wife_sqlite(group_id)
     people = get_three_sqlite(group_id)
@@ -166,8 +171,11 @@ def update_sqlite(group_id:int,user_id:int):
     c.close()
     sql_conn.close()
 
-
-
+"""
+在下面加入你自定义的插件，自动加载本文件所有的 Plugin 的子类
+只需要写一个 Plugin 的子类，重写 match() 和 handle()
+match() 返回 True 则自动回调 handle()
+"""
     
 class TestPlugin(Plugin):
     def get_group_member_card(self,group_id:int,user_id:int):
