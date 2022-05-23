@@ -27,6 +27,7 @@ cover & copy 一些好玩的插件 <br />
 | [whpj_plus](/plus/whpj_plus)   | 汇率换算  | 接口来自[中国银行](https://www.boc.cn/sourcedb/whpj) | MIT | - |
 | [cppreference_plus](/plus/cppreference_plus)   | cppreference查询  | cover自[jie65535/mirai-console-jcr-plugin](https://github.com/jie65535/mirai-console-jcr-plugin) | AGPLV3 | - |
 | [song_plus](/plus/song_plus)   | 点歌插件  | 接口来自[优客API](https://api.iyk0.com/doc/wymusic) | MIT | - |
+| [getwife_plus](/plus/getwife_plus)   | 今天谁是我老婆  | cover自(果果,QQ:2114460639) | - | - |
 
 ## 运行
 
