@@ -47,52 +47,29 @@ def create_sqlite():
     c.close()
     sql_conn.close()
 
-
-# 获得本群三天内发过言的人
-def get_three_sqlite(group_id:int) -> list[int]:
+# 获取单身名单
+def get_bachelor_sqlite(group_id:int):
     sql_conn = sqlite3.connect(os.path.join(os.path.dirname(__file__),"dat.db"))
     c = sql_conn.cursor()
     today = datetime.date.today()
     today_start_time = int(time_.mktime(time_.strptime(str(today), '%Y-%m-%d')))
     three_start_time = today_start_time - 60*60*24*2
     sql = '''
-        SELECT [user_id] FROM MYTABLE
-        WHERE 
-            [time]>{} AND 
-            [group_id]={} 
-    '''.format(three_start_time,group_id)
+        SELECT [user_id] FROM MYTABLE 
+            WHERE 
+                [group_id]={} AND 
+                ([wife_id]=0 OR [wife_time]<{}) AND 
+                [time]>{} AND 
+                [user_id] NOT IN (SELECT [wife_id] FROM MYTABLE 
+                                    WHERE 
+                                        [group_id]={} AND 
+                                        ([wife_id] <> 0 AND [wife_time] > {}))
+    '''.format(group_id,today_start_time,three_start_time,group_id,today_start_time)
     cursor  = c.execute(sql)
     user_ids = [row[0] for row in cursor]
     c.close()
     sql_conn.close()
     return user_ids
-
-# 获得本群有老婆或者已经是别人老婆的人(老婆有效期1天)
-def get_wife_sqlite(group_id:int) -> list[int]:
-    sql_conn = sqlite3.connect(os.path.join(os.path.dirname(__file__),"dat.db"))
-    c = sql_conn.cursor()
-    today = datetime.date.today()
-    today_start_time = int(time_.mktime(time_.strptime(str(today), '%Y-%m-%d')))
-    sql = '''
-        SELECT [user_id],[wife_id] FROM MYTABLE
-        WHERE
-            [group_id]={} AND 
-            [wife_time]>{} 
-    '''.format(group_id,today_start_time)
-    cursor  = c.execute(sql)
-    user_ids = []
-    for row in cursor:
-        user_ids.append(row[0])
-        user_ids.append(row[1])
-    c.close()
-    sql_conn.close()
-    return list(set(user_ids))
-
-# 获取单身名单
-def get_bachelor_sqlite(group_id:int):
-    wifes = get_wife_sqlite(group_id)
-    people = get_three_sqlite(group_id)
-    return [i for i in people if i not in wifes]
 
 # 数据库里面有没有记录
 def exist_sqlite(group_id:int,user_id:int):
@@ -111,7 +88,7 @@ def search_sqlite(group_id:int,user_id:int):
     today = datetime.date.today()
     today_start_time = int(time_.mktime(time_.strptime(str(today), '%Y-%m-%d')))
     sql = '''
-        SELECT [user_id],[wife_id] FROM MYTABLE 
+        SELECT [wife_id] FROM MYTABLE 
         WHERE 
             [group_id]={} AND 
             [user_id]={} AND 
