@@ -12,8 +12,6 @@ from core.Plugin import Plugin
 # 数据库加锁
 sql_lock = threading.Lock()
 
-wife_map = []
-
 
 """
 在下面加入你自定义的插件，自动加载本文件所有的 Plugin 的子类
@@ -194,10 +192,10 @@ class TestPlugin(Plugin):
             sql_lock.release()
         # 识别关键字
         cont = MT.get_text_from_msg(self.context["message"]).strip()
-        if cont in ["今天我老婆是谁","今天谁是我老婆","我老婆今天是谁"]:
+        if cont in ["#今天我老婆是谁","#今天谁是我老婆","#我老婆今天是谁"]:
             self.my_cont = "随机老婆"
             return True
-        if cont in ["换个老婆","换一个老婆"]:
+        if cont in ["#换个老婆","#换一个老婆"]:
             self.my_cont = "换老婆"
             return True
         return False
