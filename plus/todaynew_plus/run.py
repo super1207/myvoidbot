@@ -12,7 +12,7 @@ match() 返回 True 则自动回调 handle()
 
 class TestPlugin(Plugin):
     def match(self):  # 说 今日新闻 则回复
-        return self.on_full_match("今日新闻")
+        return self.on_full_match("#今日新闻")
 
     def handle(self):
         url = "https://api.iyk0.com/60s/"
