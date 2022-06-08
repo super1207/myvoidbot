@@ -1,3 +1,4 @@
+import re
 import json
 from urllib import parse
 from urllib import request
@@ -21,22 +22,39 @@ class TestPlugin(Plugin):
             return True
         return False
 
+    # 自定义音乐
+    # def handle(self):
+    #     url = "https://api.iyk0.com/wymusic/?" + parse.urlencode({"msg":self.my_cont}) + "&n=1&format=json"
+    #     req = request.Request(url)
+    #     res = request.urlopen(req).read().decode()
+    #     resp = json.loads(res)
+    #     music_title = resp['song']
+    #     singer = resp['singer']
+    #     url_url = resp['url']
+    #     image = resp['img']
+    #     msg = {"type": "music",
+    #             "data": {
+    #                 "image":image,
+    #                 "type": "custom", 
+    #                 "content": singer,
+    #                 "audio":url_url,
+    #                 "title":music_title
+    #             }
+    #     }
+    #     return self.send_msg(msg)
+
+    # 网易音乐
     def handle(self):
         url = "https://api.iyk0.com/wymusic/?" + parse.urlencode({"msg":self.my_cont}) + "&n=1&format=json"
         req = request.Request(url)
         res = request.urlopen(req).read().decode()
         resp = json.loads(res)
-        music_title = resp['song']
-        singer = resp['singer']
-        url_url = resp['url']
+        id = nums = re.findall(".*id=(\\d+)", resp['url'])[0]
         image = resp['img']
         msg = {"type": "music",
                 "data": {
-                    "image":image,
-                    "type": "custom", 
-                    "content": singer,
-                    "audio":url_url,
-                    "title":music_title
+                    "type":"163", 
+                    "id":id
                 }
         }
         return self.send_msg(msg)

@@ -14,3 +14,4 @@ __pycache__
 安装依赖.bat
 plus/wordcloud_plus/dat.db
 plus/emojimix_plus/emojiData.json
+plus/getwife_plus/dat.db
