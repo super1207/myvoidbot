@@ -13,11 +13,11 @@ cover & copy 一些好玩的插件 <br />
 
 | 插件名      | 介绍 | 备注 | LICENSE | 三方库依赖 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| [myfriend](/plus/myfriend_plus)  | 我的朋友图片合成       | 模板插件 | MIT | Pillow |
+| [myfriend](/plus/myfriend_plus)  | 我的朋友图片合成       | 如果在linux上，需要自己将`simsun.ttc`放到`/usr/share/fonts/font/`目录下 | MIT | Pillow |
 | [randpic](/plus/randpic_plus)   | 发送一张随机图片   | 接口来自[iw233](https://iw233.cn/api/Random.php) | MIT | - |
 | [zbgif](/plus/zbgif_plus)   | 各种表情包合成   | cover自[tdf1939/ZeroBot-Plugin-Gif](https://github.com/tdf1939/ZeroBot-Plugin-Gif) | - | Pillow |
-| [todaynew](/plus/todaynew_plus)   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/) | MIT | - |
-| [wordcloud](/plus/wordcloud_plus)   | 今日词云   | cover自[Hellobaka/WordCloud](https://github.com/Hellobaka/WordCloud) | ApacheV2 | jieba,zhon,wordcloud |
+| [todaynew](/plus/todaynew_plus)   | 今日新闻   | 接口来自[优客API](https://api.iyk0.com/60s/)，已经失效 | MIT | - |
+| [wordcloud](/plus/wordcloud_plus)   | 今日词云   | cover自[Hellobaka/WordCloud](https://github.com/Hellobaka/WordCloud)，如果在linux上，需要自己将`simsun.ttc`放到`/usr/share/fonts/font/`目录下 | ApacheV2 | jieba,zhon,wordcloud |
 | [EmojiMix](/plus/emojimix_plus)   | Emoji混合   | cover自[Hellobaka/EmojiMix](https://github.com/Hellobaka/EmojiMix) | ApacheV2 | - |
 | [runall](/plus/runall_plus)   | 在线运行各种编程语言   | cover自[super1207/runall](https://github.com/super1207/runall) | AGPLV3 | - |
 | [cet4](/plus/cet4_plus)   | 发送一套四级听力   | cover自[renren0103/CET4-Mirai](https://github.com/renren0103/CET4-Mirai) | - | - |
@@ -26,7 +26,7 @@ cover & copy 一些好玩的插件 <br />
 | [covid_plus](/plus/covid_plus)   | 新冠疫情  | 接口来自[丁香医生](https://ncov.dxy.cn/ncovh5/view/pneumonia) | MIT | - |
 | [whpj_plus](/plus/whpj_plus)   | 汇率换算  | 接口来自[中国银行](https://www.boc.cn/sourcedb/whpj) | MIT | - |
 | [cppreference_plus](/plus/cppreference_plus)   | cppreference查询  | cover自[jie65535/mirai-console-jcr-plugin](https://github.com/jie65535/mirai-console-jcr-plugin) | AGPLV3 | - |
-| [song_plus](/plus/song_plus)   | 点歌插件  | 接口来自[优客API](https://api.iyk0.com/doc/wymusic) | MIT | - |
+| [song_plus](/plus/song_plus)   | 点歌插件  | 接口来自[优客API](https://api.iyk0.com/doc/wymusic)，已经失效 | MIT | - |
 | [getwife_plus](/plus/getwife_plus)   | 今天谁是我老婆  | cover自(果果,QQ:2114460639) | - | - |
 | [express_plus](/plus/express_plus)   | 查询快递单号  | 接口来自[alapi](https://www.alapi.cn/),需要自己注册账号并获取token | MIT | - |
 
