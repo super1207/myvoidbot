@@ -28,6 +28,7 @@ cover & copy 一些好玩的插件 <br />
 | [cppreference_plus](/plus/cppreference_plus)   | cppreference查询  | cover自[jie65535/mirai-console-jcr-plugin](https://github.com/jie65535/mirai-console-jcr-plugin) | AGPLV3 | - |
 | [song_plus](/plus/song_plus)   | 点歌插件  | 接口来自[优客API](https://api.iyk0.com/doc/wymusic) | MIT | - |
 | [getwife_plus](/plus/getwife_plus)   | 今天谁是我老婆  | cover自(果果,QQ:2114460639) | - | - |
+| [express_plus](/plus/express_plus)   | 查询快递单号  | 接口来自[alapi](https://www.alapi.cn/),需要自己注册账号并获取token | MIT | - |
 
 ## 运行
 

@@ -55,6 +55,8 @@ class Plugin:
         # https://github.com/botuniverse/onebot-11/blob/master/api/public.md#send_msg-%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF
         if "group_id" in self.context and self.context["group_id"]:
             return self.send_group_msg(*message)
+        elif "guild_id" in self.context and self.context["guild_id"]:
+            return self.send_guild_channel_msg(*message)
         else:
             return self.send_private_msg(*message)
 
@@ -68,4 +70,9 @@ class Plugin:
         # https://github.com/botuniverse/onebot-11/blob/master/api/public.md#send_group_msg-%E5%8F%91%E9%80%81%E7%BE%A4%E6%B6%88%E6%81%AF
         params = {"group_id": self.context["group_id"], "message": message}
         ret = self.call_api("send_group_msg", params)
+        return 0 if ret is None or ret["status"] == "failed" else ret["data"]["message_id"]
+
+    def send_guild_channel_msg(self, *message) -> int:
+        params = {"guild_id": self.context["guild_id"],"channel_id": self.context["channel_id"], "message": message}
+        ret = self.call_api("send_guild_channel_msg", params)
         return 0 if ret is None or ret["status"] == "failed" else ret["data"]["message_id"]

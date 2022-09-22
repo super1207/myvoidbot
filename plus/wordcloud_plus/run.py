@@ -38,7 +38,7 @@ def deal_sqlite(time,group,data):
     
 class TestPlugin(Plugin):
     def match(self): 
-        if self.context["post_type"] != "message":
+        if self.context["post_type"] != "message" or self.context["message_type"] != "group":
             return False
         if self.on_full_match("#今日词云"):
             return True
